@@ -1,0 +1,7 @@
+<div class="container-fluid">
+  <div class="row" *ngFor="let workout of workouts">
+    <div class="col-6">
+      <app-workout-tile [workout]="workout"></app-workout-tile>
+    </div>
+  </div>
+</div>
