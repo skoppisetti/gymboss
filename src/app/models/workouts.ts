@@ -27,7 +27,7 @@ export class Workout {
     readonly name: string;
     readonly type: string; // Should make this a Enum of 'circuit' 'hiit' etc
     readonly desc: string;
-    readonly routine: Routine[]; 
+    readonly routine: Routine[];
     constructor(options: {id: number, name: string, type: string, desc: string, routine: Routine[]}) {
         this.id = options.id;
         this.name = options.name;

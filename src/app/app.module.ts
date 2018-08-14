@@ -9,6 +9,7 @@ import { WorkoutTileComponent } from './workout-tile/workout-tile.component';
 import { WorkoutService } from './services/workout.service';
 import { NavbarComponent } from './navbar/navbar.component';
 import { WorkoutDetailComponent } from './workout-detail/workout-detail.component';
+import { ExerciseDetailComponent } from './exercise-detail/exercise-detail.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { WorkoutDetailComponent } from './workout-detail/workout-detail.componen
     HomeComponent,
     WorkoutTileComponent,
     NavbarComponent,
-    WorkoutDetailComponent
+    WorkoutDetailComponent,
+    ExerciseDetailComponent
   ],
   imports: [
     BrowserModule,

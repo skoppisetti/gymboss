@@ -1,3 +1,15 @@
 <div class="container-fluid col-sm-12 col-md-8">
-  Workout: {{ workout.name }}
+  <div class="card">
+    <img class="card-img-top" src="holder.js/500x200?theme=gray&text=!gb!&size=50">
+    <div class="card-body">
+      <h5 class="card-title">{{ workout.name }}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{ workout.type }}</h6>
+      <p class="card-text">{{ workout.desc }}</p>
+      <div class="list-group">
+        <div class="list-group-item flex-column align-items-start" *ngFor="let routine of workout.routine">
+          <app-exercise-detail [routine]="routine"></app-exercise-detail>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

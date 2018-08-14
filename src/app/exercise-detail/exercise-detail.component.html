@@ -1,0 +1,8 @@
+<div class="d-flex w-100 justify-content-between">
+  <h5 class="mb-1">{{ routine.ex.name }}</h5> 
+  <!--<span class="badge badge-primary badge-pill">-->
+    <small class="text-muted">{{ routine.reps > 0 ? routine.reps : routine.duration }}
+    {{ routine.reps > 0 ? "reps" : "mins" }}</small>
+  <!--</span>-->
+</div>
+<p class="mb-1 text-muted">{{ routine.ex.desc }}</p>
