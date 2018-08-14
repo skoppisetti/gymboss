@@ -1,8 +1,8 @@
-<div class="card border-primary mb-3" style="width: 18rem;">
-  <div class="card-body text-secondary">
+<div class="card border-default mb-3" style="width: 18rem;">
+  <div class="card-body text-default">
     <h5 class="card-title">{{ workout.name }}</h5>
     <h6 class="card-sub-title mb-2 text-muted">{{ workout.type }}</h6>
     <p class="card-text">{{ workout.desc }}</p>
-    <a routerLink="/workout-detail" class="card-link">Details</a>
+    <a [routerLink]="['/workout', workout.id]" class="card-link">View</a>
   </div>
 </div>

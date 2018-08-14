@@ -1,7 +1,11 @@
-<div class="container-fluid">
-  <div class="row" *ngFor="let workout of workouts">
-    <div class="col-6">
-      <app-workout-tile [workout]="workout"></app-workout-tile>
+<div class="container-fluid col-sm-12 col-md-8">
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Welcome to GymBoss!</h1>
+      <p class="lead">Get in shape, maggot!</p>
     </div>
+  </div>
+  <div *ngFor="let workout of workouts">
+    <app-workout-tile [workout]="workout"></app-workout-tile>
   </div>
 </div>

@@ -13,7 +13,16 @@ export class HomeComponent implements OnInit {
   constructor(private workoutService: WorkoutService) { }
 
   ngOnInit() {
-    this.workouts = this.workoutService.getAllWorkouts();
+    this.workoutService
+      .getAllWorkouts()
+      .subscribe(
+        data => {
+          console.log(data);
+          this.workouts = data;
+        },
+        err => console.log(err),
+        () => console.log('GetWorkouts() complete.')
+      );
   }
 
 }
