@@ -18,6 +18,7 @@ import { TimerComponent } from './timer/timer.component';
 
 import { environment } from '../environments/environment';
 import { TestComponent } from './test/test.component';
+import { DataEntryComponent } from './admin/data-entry/data-entry.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { TestComponent } from './test/test.component';
     WorkoutDetailComponent,
     ExerciseDetailComponent,
     TimerComponent,
-    TestComponent
+    TestComponent,
+    DataEntryComponent
   ],
   imports: [
     BrowserModule,

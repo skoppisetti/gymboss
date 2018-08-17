@@ -11,9 +11,9 @@ export class TimerComponent implements OnInit {
   counter$: Observable<number>;
   counter: string;
   @Input() duration: number;
-  time = new Observable(
-    observer => setInterval(() => observer.next(new Date().toString()), 1000)
-  );
+  // time = new Observable(
+  //  observer => setInterval(() => observer.next(new Date().toString()), 1000)
+  // );
 
   constructor(private route: ActivatedRoute) { }
 
@@ -25,7 +25,7 @@ export class TimerComponent implements OnInit {
   }
 
   startCountdown(dur: number) {
-    console.log("Countdown is starting...")
+    console.log('Countdown is starting...');
     console.log(dur);
     // return 1;
   }
