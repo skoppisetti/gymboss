@@ -5,6 +5,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireStorageModule } from 'angularfire2/storage';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -19,6 +20,7 @@ import { TimerComponent } from './timer/timer.component';
 import { environment } from '../environments/environment';
 import { TestComponent } from './test/test.component';
 import { DataEntryComponent } from './admin/data-entry/data-entry.component';
+import { MaterialModule } from './material/material.module';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { DataEntryComponent } from './admin/data-entry/data-entry.component';
     AngularFirestoreModule,
     AngularFireStorageModule,
     AngularFireAuthModule,
-    RouterModule.forRoot(AppRoutes.routeConfig)
+    RouterModule.forRoot(AppRoutes.routeConfig),
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [WorkoutService],
   bootstrap: [AppComponent]
