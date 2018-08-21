@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { WorkoutService } from '../services/workout.service';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { switchMap } from 'rxjs/operators';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { Workout } from '../models/workouts';
 
 @Component({
@@ -19,7 +19,7 @@ export class WorkoutDetailComponent implements OnInit {
   ngOnInit() {
     this.workout$ = this.route.paramMap.pipe(
       switchMap(
-        (params: ParamMap) => 
+        (params: ParamMap) =>
           this.workoutService.getWorkout(+params.get('id'))
       )
     );
@@ -31,7 +31,7 @@ export class WorkoutDetailComponent implements OnInit {
       err => console.log(err),
       () => console.log(`Done getting data`)
     );
-    console.log('Initialized workout detail.')
+    console.log('Initialized workout detail.');
   }
 
 }
