@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { range, timer, interval } from 'rxjs';
 import { filter, map, takeUntil } from 'rxjs/operators';
 
@@ -11,9 +11,9 @@ import { filter, map, takeUntil } from 'rxjs/operators';
 })
 export class TimerComponent implements OnInit {
   counter$: Observable<number>;
-  counter: number = 0;
+  counter = 0;
   @Input() duration: number;
-  testVar = "Test var";
+  testVar = 'Test var';
   // time = new Observable(
   //  observer => setInterval(() => observer.next(new Date().toString()), 1000)
   // );
@@ -48,6 +48,12 @@ export class TimerComponent implements OnInit {
       console.log(val);
       this.counter = val + 1;
     });
+
+    const range$ = range(1, 5);
+    console.log(range$);
+    console.log('end');
+
+    range$.subscribe(val => console.log(`Range val ${val}`));
   }
 
 }
