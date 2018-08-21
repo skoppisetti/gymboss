@@ -21,6 +21,7 @@ import { environment } from '../environments/environment';
 import { TestComponent } from './test/test.component';
 import { DataEntryComponent } from './admin/data-entry/data-entry.component';
 import { MaterialModule } from './material/material.module';
+import { SidenavListComponent } from './navbar/sidenav-list/sidenav-list.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { MaterialModule } from './material/material.module';
     ExerciseDetailComponent,
     TimerComponent,
     TestComponent,
-    DataEntryComponent
+    DataEntryComponent,
+    SidenavListComponent
   ],
   imports: [
     BrowserModule,

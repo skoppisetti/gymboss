@@ -1,3 +1,25 @@
-<nav class="navbar navbar-light">
+<!--<nav class="navbar navbar-light">
   <span class="navbar-brand mb-0 h1">Gym Boss</span>
-</nav>
+</nav>-->
+<mat-toolbar color="primary">
+  <div fxHide.gt-xs><button mat-icon-button (click)="onToggleSideNav()">
+      <mat-icon>menu</mat-icon>
+  </button></div>
+  <div><a routerLink="/">GymBoss</a></div>
+  <div fxFlex fxLayout fxLayoutAlign="space-evenly" fxHide.xs>
+      <ul fxLayout fxLayoutGap="25px" class="navigation-items">
+          <li><a routerLink="/signup">Signup</a></li>
+          <li><a routerLink="/login">Login</a></li>
+          <li><a routerLink="/training">Training</a></li>
+          <li>
+              <a [matMenuTriggerFor]="testMenu">Administration</a>
+              <mat-menu #testMenu="matMenu" overlapTrigger="false">
+                  <button mat-menu-item>Monitor Services</button>
+                  <button mat-menu-item>User Management</button>
+              </mat-menu>
+          </li>
+          <li><a>Logout</a></li>
+      </ul>
+                    
+  </div>
+</mat-toolbar>
