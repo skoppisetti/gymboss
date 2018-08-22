@@ -5,8 +5,10 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireStorageModule } from 'angularfire2/storage';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -23,6 +25,9 @@ import { TestComponent } from './test/test.component';
 import { DataEntryComponent } from './admin/data-entry/data-entry.component';
 import { MaterialModule } from './material/material.module';
 import { SidenavListComponent } from './navbar/sidenav-list/sidenav-list.component';
+import { DataExerciseComponent } from './admin/data-entry/data-exercise/data-exercise.component';
+import { DataWorkoutComponent } from './admin/data-entry/data-workout/data-workout.component';
+import { DataRoutineComponent } from './admin/data-entry/data-routine/data-routine.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +40,10 @@ import { SidenavListComponent } from './navbar/sidenav-list/sidenav-list.compone
     TimerComponent,
     TestComponent,
     DataEntryComponent,
-    SidenavListComponent
+    SidenavListComponent,
+    DataExerciseComponent,
+    DataWorkoutComponent,
+    DataRoutineComponent
   ],
   imports: [
     BrowserModule,
@@ -43,10 +51,12 @@ import { SidenavListComponent } from './navbar/sidenav-list/sidenav-list.compone
     AngularFirestoreModule,
     AngularFireStorageModule,
     AngularFireAuthModule,
+    AngularFireDatabaseModule,
     RouterModule.forRoot(AppRoutes.routeConfig),
     BrowserAnimationsModule,
     MaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    ReactiveFormsModule
   ],
   providers: [WorkoutService],
   bootstrap: [AppComponent]

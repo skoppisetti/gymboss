@@ -1,4 +1,4 @@
-<div class="container">
+<!--<div class="container">
   <ul class="nav nav-tabs">
     <li class="nav-item">
       <a class="nav-link active" [routerLink]="">Exercises</a>
@@ -10,4 +10,16 @@
       <a class="nav-link" [routerLink]="">Routines</a>
     </li>
   </ul>
-</div>
+</div>-->
+
+<mat-tab-group color="primary">
+  <mat-tab label="Exercises">
+    <app-data-exercise></app-data-exercise>
+  </mat-tab>
+  <mat-tab label="Workouts">
+    <app-data-workout></app-data-workout>
+  </mat-tab>
+  <mat-tab label="Routines">
+    <app-data-routine></app-data-routine>
+  </mat-tab>
+</mat-tab-group>

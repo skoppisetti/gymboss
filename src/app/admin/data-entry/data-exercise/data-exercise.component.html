@@ -1,0 +1,31 @@
+<div class="container">
+  <form 
+    [formGroup]="exSetupForm"
+    fxLayout="column"
+    fxLayoutAlign="left center"
+    (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <input 
+        matInput 
+        placeholder="Enter a name" 
+        formControlName="name">
+    </mat-form-field>
+    <mat-form-field>
+      <textarea 
+        matInput 
+        placeholder="Enter a description" 
+        formControlName="desc"></textarea>
+    </mat-form-field>
+    <mat-form-field>
+      <textarea 
+        matInput 
+        placeholder="Enter a comma separated list of tags"
+        formControlName="tags"></textarea>
+        <mat-hint>These tags will help our gym rats find the right exercises.</mat-hint>
+    </mat-form-field>
+    <div style="padding: 20px;">
+      <button type="submit" mat-raised-button color="primary" [disabled]="!exSetupForm.valid">Save</button>
+      <button mat-raised-button (click)="onCancel()">Cancel</button>
+    </div>
+  </form>
+</div>
