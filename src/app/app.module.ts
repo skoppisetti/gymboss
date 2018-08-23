@@ -28,6 +28,8 @@ import { SidenavListComponent } from './navbar/sidenav-list/sidenav-list.compone
 import { DataExerciseComponent } from './admin/data-entry/data-exercise/data-exercise.component';
 import { DataWorkoutComponent } from './admin/data-entry/data-workout/data-workout.component';
 import { DataRoutineComponent } from './admin/data-entry/data-routine/data-routine.component';
+import { ExercisesSearchComponent } from './exercises-search/exercises-search.component';
+import { AddExercisesDialogComponent } from './admin/data-entry/data-workout/add-exercises-dialog/add-exercises-dialog.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,9 @@ import { DataRoutineComponent } from './admin/data-entry/data-routine/data-routi
     SidenavListComponent,
     DataExerciseComponent,
     DataWorkoutComponent,
-    DataRoutineComponent
+    DataRoutineComponent,
+    ExercisesSearchComponent,
+    AddExercisesDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -59,6 +63,7 @@ import { DataRoutineComponent } from './admin/data-entry/data-routine/data-routi
     ReactiveFormsModule
   ],
   providers: [WorkoutService],
+  entryComponents: [AddExercisesDialogComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

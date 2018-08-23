@@ -1,3 +1,34 @@
-<p>
-  data-workout works!
-</p>
+<div class="container">
+  <form 
+    [formGroup]="workoutSetupForm"
+    fxLayout="column"
+    fxLayoutAlign="left center"
+    (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <input 
+        matInput 
+        placeholder="Enter a name" 
+        formControlName="name">
+    </mat-form-field>
+    <mat-form-field>
+      <textarea 
+        matInput 
+        placeholder="Enter a description" 
+        formControlName="desc"></textarea>
+    </mat-form-field>
+    <mat-form-field>
+      <textarea 
+        matInput 
+        placeholder="Enter a comma separated list of tags"
+        formControlName="tags"></textarea>
+        <mat-hint>These tags will help our gym rats find the right exercises.</mat-hint>
+    </mat-form-field>
+    <div formArrayName="exercises">
+      <button mat-raised-button type="button" (click)="addExDialog()">Add Exercises</button>
+    </div>
+    <div style="padding: 20px;">
+      <button type="submit" mat-raised-button color="primary" [disabled]="!workoutSetupForm.valid">Save</button>
+      <button type="button" mat-raised-button (click)="onCancel()">Cancel</button>
+    </div>
+  </form>
+</div>
