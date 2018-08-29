@@ -28,12 +28,17 @@ export class ExercisesSearchComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
     console.log("OnInit()")
-    this.getAllExercises().subscribe((data) => this.exercises = data);
+    // this.getAllExercises().subscribe((data) => setTimeout(() => this.exercises = data, 20));
+    this.getAllExercises().subscribe((data) => {
+      this.exercises = data;
+      this.dataSource = new MatTableDataSource<Exercise>(data);
+      console.log('Exercises', data);
+    });
   }
 
   ngAfterViewInit(): void {
     console.log("AfterViewInit()")
-    this.dataSource = new MatTableDataSource<Exercise>(this.exercises);
+    // this.dataSource = new MatTableDataSource<Exercise>(this.exercises);
   }
 
   getAllExercises(): Observable<Exercise[]> {

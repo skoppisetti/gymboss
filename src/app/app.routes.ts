@@ -3,13 +3,15 @@ import { WorkoutDetailComponent } from './workout-detail/workout-detail.componen
 import { TimerComponent } from './timer/timer.component';
 import { TestComponent } from './test/test.component';
 import { DataEntryComponent } from './admin/data-entry/data-entry.component';
+import { LoginComponent } from './auth/login/login.component';
 
 export class AppRoutes {
     static routeConfig = [
         { path: '', component: HomeComponent },
-        { path: 'workout/:id', component: WorkoutDetailComponent},
-        { path: 'timer/:duration', component: TimerComponent},
-        { path: 'test', component: TestComponent},
-        { path: 'data', component: DataEntryComponent}
+        { path: 'workout/:id', component: WorkoutDetailComponent },
+        { path: 'timer/:duration', component: TimerComponent },
+        { path: 'test', component: TestComponent },
+        { path: 'data', component: DataEntryComponent },
+        { path: 'login', component: LoginComponent }
     ];
 }

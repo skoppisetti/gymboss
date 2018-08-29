@@ -14,6 +14,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AppRoutes } from './app.routes';
 import { WorkoutTileComponent } from './workout-tile/workout-tile.component';
+import { ExerciseTileComponent } from './exercise-tile/exercise-tile.component';
 import { WorkoutService } from './services/workout.service';
 import { NavbarComponent } from './navbar/navbar.component';
 import { WorkoutDetailComponent } from './workout-detail/workout-detail.component';
@@ -30,12 +31,14 @@ import { DataWorkoutComponent } from './admin/data-entry/data-workout/data-worko
 import { DataRoutineComponent } from './admin/data-entry/data-routine/data-routine.component';
 import { ExercisesSearchComponent } from './exercises-search/exercises-search.component';
 import { AddExercisesDialogComponent } from './admin/data-entry/data-workout/add-exercises-dialog/add-exercises-dialog.component';
+import { LoginComponent } from './auth/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     WorkoutTileComponent,
+    ExerciseTileComponent,
     NavbarComponent,
     WorkoutDetailComponent,
     ExerciseDetailComponent,
@@ -47,7 +50,8 @@ import { AddExercisesDialogComponent } from './admin/data-entry/data-workout/add
     DataWorkoutComponent,
     DataRoutineComponent,
     ExercisesSearchComponent,
-    AddExercisesDialogComponent
+    AddExercisesDialogComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
